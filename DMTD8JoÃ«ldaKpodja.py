@@ -12,8 +12,8 @@ from GradDesc import *
 import numpy as np
 import matplotlib.pyplot as plt
 
-""" Nous avons récupéré les données data que nous allons utiliser
- L’objet data étant un dictionnaire, nous pouvons récupérer les clef avec la méthode keys() """
+""" Nous avons récupéré les données data que nous allons utiliser
+ L’objet data étant un dictionnaire, nous pouvons récupérer les clef avec la méthode keys() """
     
 #print(iris['data'])
 #print(iris['target'])
@@ -43,7 +43,7 @@ print(Y.shape)
 
 """ Exercices """
 
-""" Question 1 : Programmez une fonction qui calcule le nombre d’erreurs commises par un classifieur linéaire.  """
+"""  1 : Programmons une fonction qui calcule le nombre d’erreurs commises par un classifieur linéaire.  """
 
 
 def nombre_erreur(u_vec, S):
@@ -65,7 +65,7 @@ def nombre_erreur(u_vec, S):
     
 
 
-""" Question 2 : Programmez une fonction qui calcule une loss pour ce classifieur (basée sur la log-
+""" 2 : Programmons une fonction qui calcule une loss pour ce classifieur (basée sur la log-
 vraisemblance et le softmax) """
 
 def softmax(v):
@@ -165,9 +165,9 @@ print("Voici nb_error(U, S) = ")
 
 print(nombre_erreur(U, S))
 
-""" Question 3 : Appliquez la descente de gradient à cette loss"""
+""" 3 : Appliquons la descente de gradient à cette loss"""
 
-""" Nouq allons stocker les doonnées de la déscente de gradient appliquée à notre fonction loss dans data1 """
+""" Nous allons stocker les doonnées de la déscente de gradient appliquée à notre fonction loss dans data1 """
 
 data1 = grad_desc_n(loss, S, 12, 1000, step = 0.02, x_0 = None)
 
@@ -177,7 +177,7 @@ print("Voici la déscente de gradient appliquée à la loss : ")
 print(data1)
 
 
-""" Question 4 : Nous pouvont finalement chercher la solution trouvée et le nombre d'erreur commises par cette solution en utilisant la descente de gradient redimensionnée """
+""" 4 : Nous pouvont finalement chercher la solution trouvée et le nombre d'erreur commises par cette solution en utilisant la descente de gradient redimensionnée """
 
 U_solution = data1.reshape(3,4)
 
